@@ -1,3 +1,12 @@
+/*
+ * @Author: Jack
+ * @Date: 2019-07-24 14:32:25
+ * @LastEditors  : Jack
+ * @LastEditTime : 2019-12-23 14:13:36
+ * @Description: 权限控制
+ * 1. whitelist白名单
+ * 2. 这边的token使用的cookie
+ */
 import router from './router'
 import store from './store'
 import { Message } from 'element-ui'
@@ -48,7 +57,7 @@ router.beforeEach(async(to, from, next) => {
         } catch (error) {
           // remove token and go to login page to re-login
           await store.dispatch('user/resetToken')
-          Message.error(error || 'Has Error')
+          Message.error(error || 'permission Has Error')
           next(`/login?redirect=${to.path}`)
           NProgress.done()
         }

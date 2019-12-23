@@ -1,3 +1,18 @@
+/*
+ * @Author: Jack
+ * @Date: 2019-07-24 14:32:25
+ * @LastEditors  : Jack
+ * @LastEditTime : 2019-12-23 14:08:19
+ * @Description:
+ * 1. 采用了normalize作为base.css 然后再引入index.scss
+ * 2. 全局引如了elementUI
+ * 3. router分为了两部分，权限路由 && 非权限路由，默认值载入后者
+ * 4. store基本都是按照modules来管理的，干净
+ * 5. permission是接口router做权限管理的，动态载入上方的权限路由
+ * 6. icons就是SvgIcon的一个应用，没用可以去掉的
+ * 7. error-log就是在vue的全局errorHandle上挂载一些output
+ * 8. 注册全局filter
+ */
 import Vue from 'vue'
 
 import Cookies from 'js-cookie'

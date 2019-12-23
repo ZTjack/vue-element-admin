@@ -1,3 +1,13 @@
+/*
+ * @Author: Jack
+ * @Date: 2019-07-24 14:32:25
+ * @LastEditors  : Jack
+ * @LastEditTime : 2019-12-23 14:09:32
+ * @Description: 全局配置文件
+ * 1. 配置title
+ * 2. 配置总体布局
+ */
+
 module.exports = {
   title: 'Vue Element Admin',
 
