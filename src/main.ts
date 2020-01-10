@@ -2,7 +2,7 @@
  * @Author: Jack
  * @Date: 2019-07-24 14:32:25
  * @LastEditors  : Jack
- * @LastEditTime : 2019-12-23 14:08:19
+ * @LastEditTime : 2020-01-10 12:14:38
  * @Description:
  * 1. 采用了normalize作为base.css 然后再引入index.scss
  * 2. 全局引如了elementUI
@@ -24,7 +24,7 @@ import './styles/element-variables.scss'
 
 import '@/styles/index.scss' // global css
 
-import App from './App'
+import App from './App.vue'
 import store from './store'
 import router from './router'
 
@@ -54,7 +54,7 @@ Vue.use(Element, {
 
 // register global utility filters
 Object.keys(filters).forEach(key => {
-  Vue.filter(key, filters[key])
+  Vue.filter(key, (filters as { [key: string ]: Function })[key])
 })
 
 Vue.config.productionTip = false
